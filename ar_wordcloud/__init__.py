@@ -1,5 +1,5 @@
 """A tiny wrapper around `wordcloud.WordCloud` to support Arabic WordCloud"""
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 __author__ = "Aziz Alto, iamaziz.alto@gmail.com"
 __date__ = "May, 17 2020"
 
