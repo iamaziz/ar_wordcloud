@@ -24,14 +24,14 @@ class ArabicWordCloud(wordcloud.WordCloud):
         self.fonts = ArabicFonts()
         self.FONT_FILE = self.fonts.default_font
         super().__init__(font_path=self.FONT_FILE, **kwargs)
-        self.stopwords = kwargs.get("stopwords", STOPWORDS)
+        self.STOPWORDS = STOPWORDS  # for arabic, and self.stopwords for english
 
     @staticmethod
     def reshape_rtl(s: str) -> str:
         return get_display(reshape(s))
 
     def remove_stop_words(self, words: List[str]) -> List[str]:
-        return [w for w in words if w not in self.stopwords]
+        return [w for w in words if w not in self.STOPWORDS]
 
     @wraps(wordcloud.WordCloud.generate_from_frequencies)
     def from_dict(
