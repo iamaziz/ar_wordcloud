@@ -9,6 +9,8 @@ A tiny wrapper around [`wordcloud.WordCloud`](https://github.com/amueller/word_c
 
 ### Usage:
 
+> Also, see the [notebook](examples/how_to.ipynb) example.
+
 Import and instantiate the main class:
 ```python
 from ar_wordcloud import ArabicWordCloud
@@ -21,14 +23,14 @@ t = 'أهلاً وسهلا، اللغة العربية جميلة'
 wc = awc.from_text(t)
 wc.to_file('hello.png')
 ```
-![](examples/hello.png) 
+![](examples/hello.png)
 
-Or, build a word cloud from a dictionary: 
+Or, build a word cloud from a dictionary:
 ```python
 d = {"مرحبا": 12, "برمج": 8, "من": 10, "رمضان كريم": 15, "العيد قرب": 12, "اهلين": 1, "كورونا": 3}
 dict_wc = awc.from_dict(d, ignore_stopwords=True)
 awc.plot(dict_wc, title="كل عام وانتم بخير", width=2, height=2)
-``` 
+```
 ![](examples/happy_eid.png)
 
 Or, read text from a file:
@@ -48,4 +50,8 @@ TODO:
 - [ ] fix English font
 - [ ] cli support
 
-PRs are welcome, thanks 🙏.
+PRs are welcome, thanks 🙏
+
+<hr>
+
+Credit: this repo was born from [the discussion in this PR](https://github.com/amueller/word_cloud/pull/315).
