@@ -47,3 +47,5 @@ TODO:
 - [ ] browse available fonts and select favorite
 - [ ] fix English font
 - [ ] cli support
+
+PRs are welcome, thanks 🙏.
