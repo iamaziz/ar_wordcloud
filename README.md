@@ -40,10 +40,27 @@ wc = awc.from_file('examples/arabic.txt')
 wc.to_file('examples/arabic.png')
 ```
 ![](examples/arabic.png)
+
+<hr>
+
+Also, you can use a mask:
+
+```python
+from ar_wordcloud import ArabicWordCloud
+from ar_wordcloud.utils import read_mask_image
+
+mask_img = read_mask_image() # NOTE: pass `mask_img_url` param to use a different mask, the default is a heart 
+awc = ArabicWordCloud(background_color="white", mask=mask_img, contour_width=4)
+
+awc.from_file('examples/arabic.txt').to_image()
+```
+
+![](examples/heart_mask.png)
+
 <hr>
 
 TODO:
-- [ ] support mask plots
+- [x] support mask plots
 - [ ] clean input text (remove punct .. etc)
 - [x] support input from file e.g. `awc.from_file(fname)`
 - [ ] browse available fonts and select favorite
