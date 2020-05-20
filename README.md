@@ -50,7 +50,7 @@ from ar_wordcloud import ArabicWordCloud
 from ar_wordcloud.utils import read_mask_image
 
 mask_img = read_mask_image() # NOTE: pass `mask_img_url` param to use a different mask, the default is a heart 
-awc = ArabicWordCloud(background_color="white", mask=mask_img, contour_width=4)
+awc = ArabicWordCloud(background_color="white", mask=mask_img, contour_width=4, scale=0.5)
 
 awc.from_file('examples/arabic.txt').to_image()
 ```
