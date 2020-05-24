@@ -1,6 +1,6 @@
 <div align="right" style="text-align: right"><i><sup>✨ May, 17 2020 ✨</sup></i></div>
 
-# ar_wordcloud
+# ar_wordcloud [![PyPI version](https://badge.fury.io/py/ar_wordcloud.svg)](http://badge.fury.io/py/ar_wordcloud)
 A tiny wrapper around [`wordcloud.WordCloud`](https://github.com/amueller/word_cloud/blob/master/wordcloud/wordcloud.py#L154) to support WordCloud with Arabic text.
 
 ### Installation:
