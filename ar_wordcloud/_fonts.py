@@ -3,8 +3,8 @@
 import os
 from functools import lru_cache
 from glob import glob
-from typing import Dict
 from pathlib import Path
+from typing import Dict
 
 import requests
 

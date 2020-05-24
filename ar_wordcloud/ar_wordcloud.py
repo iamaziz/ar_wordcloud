@@ -2,18 +2,16 @@
 # Author: Aziz Alto - iamaziz.alto@gmail.com"
 # Date: May, 17 2020
 import os
-from typing import List
-from pathlib import Path
-from typing import Dict
 from functools import wraps
+from pathlib import Path
+from typing import Dict, List
 
-import wordcloud
 import matplotlib.pyplot as plt
+import wordcloud
 from arabic_reshaper import reshape
 from bidi.algorithm import get_display
 
 from ._fonts import ArabicFonts
-
 
 THIS_DIR = Path(__file__).parent.absolute()
 STOPWORDS = set(map(str.strip, open(os.path.join(THIS_DIR, "stopwords")).readlines()))
