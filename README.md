@@ -43,6 +43,8 @@ wc.to_file('examples/arabic.png')
 
 <hr>
 
+## Using a mask
+
 Also, you can use a mask:
 
 ```python
@@ -59,11 +61,40 @@ awc.from_file('examples/arabic.txt').to_image()
 
 <hr>
 
+## Multiple fonts support
+
+It's also possible to choose a different Arabic font:
+
+```python
+from ar_wordcloud import ArabicWordCloud
+
+awc = ArabicWordCloud(font='NotoSansArabic-ExtraBold.ttf')
+
+t = f"عيدفطر2020 سعيد، كل عام وانتم بخير"
+awc.from_text(t).to_image()
+```
+
+![](examples/more_fonts.png)
+
+```python
+# To see the available fonts:
+print(awc.fonts.available_fonts)
+```
+
+> If the entered font name is not correct, there'll be a friendly assertion message:
+
+```bash
+AssertionError: بالله أتأكد ان اسم الخط المُدخل صحيح
+Please make sure the selected font name is correct!
+```
+
+<hr>
+
 TODO:
 - [x] support mask plots
 - [ ] clean input text (remove punct .. etc)
 - [x] support input from file e.g. `awc.from_file(fname)`
-- [ ] browse available fonts and select favorite
+- [x] browse available fonts and select favorite
 - [ ] fix English font
 - [ ] cli support
 
