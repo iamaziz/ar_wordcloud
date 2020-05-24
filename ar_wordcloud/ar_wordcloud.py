@@ -20,10 +20,9 @@ STOPWORDS = set(map(str.strip, open(os.path.join(THIS_DIR, "stopwords")).readlin
 
 
 class ArabicWordCloud(wordcloud.WordCloud):
-    def __init__(self, **kwargs):
-        self.fonts = ArabicFonts()
-        self.FONT_FILE = self.fonts.default_font
-        super().__init__(font_path=self.FONT_FILE, **kwargs)
+    def __init__(self, font: str = "NotoNaskhArabic-Regular.ttf", **kwargs):
+        self.fonts = ArabicFonts(font=font)
+        super().__init__(font_path=self.fonts.default_font, **kwargs)
         self.STOPWORDS = STOPWORDS  # for arabic, and self.stopwords for english
 
     @staticmethod
